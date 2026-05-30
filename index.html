@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevFolio — Alex Rahman</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__brand">
+      <span class="nav__brand-dot"></span>AR
+    </a>
+    <ul class="nav__links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav__auth">
+      <a href="pages/login.html" class="btn-outline">Sign in</a>
+      <a href="pages/register.html" class="btn-solid">Get started</a>
+    </div>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="pages/login.html">Sign in</a>
+    <a href="pages/register.html" class="btn-solid">Get started</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__bg-grid"></div>
+    <div class="hero__noise"></div>
+    <div class="hero__content">
+      <div class="hero__eyebrow">
+        <span class="dot dot--green"></span>
+        Available for work · Bangladesh
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__title-line" data-delay="0">Crafting</span>
+        <span class="hero__title-line italic" data-delay="100">digital</span>
+        <span class="hero__title-line" data-delay="200">experiences</span>
+      </h1>
+      <p class="hero__desc">
+        Web developer focused on clean code, sharp design,<br />
+        and websites that actually perform.
+      </p>
+      <div class="hero__actions">
+        <a href="#work" class="btn-solid btn-lg">See my work</a>
+        <a href="#contact" class="btn-text">Get in touch <span>→</span></a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+      <span>scroll</span>
+    </div>
+    <div class="hero__counter">
+      <div class="hero__counter-item">
+        <strong class="count-up" data-target="12">0</strong>
+        <span>projects</span>
+      </div>
+      <div class="hero__counter-item">
+        <strong class="count-up" data-target="3">0</strong>
+        <span>years exp.</span>
+      </div>
+      <div class="hero__counter-item">
+        <strong class="count-up" data-target="8">0</strong>
+        <span>clients</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span>HTML5</span><span>·</span>
+      <span>CSS3</span><span>·</span>
+      <span>JavaScript</span><span>·</span>
+      <span>Responsive Design</span><span>·</span>
+      <span>REST APIs</span><span>·</span>
+      <span>Git & GitHub</span><span>·</span>
+      <span>Accessibility</span><span>·</span>
+      <span>Performance</span><span>·</span>
+      <span>HTML5</span><span>·</span>
+      <span>CSS3</span><span>·</span>
+      <span>JavaScript</span><span>·</span>
+      <span>Responsive Design</span><span>·</span>
+      <span>REST APIs</span><span>·</span>
+      <span>Git & GitHub</span><span>·</span>
+      <span>Accessibility</span><span>·</span>
+      <span>Performance</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- WORK -->
+  <section class="work section" id="work">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Selected work</span>
+        <h2 class="section-title">Projects I'm <em>proud</em> of</h2>
+      </div>
+
+      <div class="projects-list">
+
+        <article class="project-row reveal">
+          <div class="project-row__num">01</div>
+          <div class="project-row__info">
+            <div class="project-row__tags">
+              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+            </div>
+            <h3>E-commerce Store UI</h3>
+            <p>A fully responsive online store with cart functionality, product filtering, and smooth checkout UX built entirely in vanilla JS.</p>
+          </div>
+          <div class="project-row__thumb" style="background:#1a1a2e;">
+            <span class="project-emoji">🛒</span>
+          </div>
+          <div class="project-row__links">
+            <a href="#" class="btn-outline btn-sm">Demo ↗</a>
+            <a href="https://github.com" target="_blank" class="btn-ghost btn-sm">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-row reveal">
+          <div class="project-row__num">02</div>
+          <div class="project-row__info">
+            <div class="project-row__tags">
+              <span class="tag">JavaScript</span><span class="tag">REST API</span>
+            </div>
+            <h3>Weather Dashboard</h3>
+            <p>Real-time weather app using OpenWeather API with geolocation, 5-day forecasts, animated weather icons, and dark/light mode.</p>
+          </div>
+          <div class="project-row__thumb" style="background:#0d2137;">
+            <span class="project-emoji">🌤️</span>
+          </div>
+          <div class="project-row__links">
+            <a href="#" class="btn-outline btn-sm">Demo ↗</a>
+            <a href="https://github.com" target="_blank" class="btn-ghost btn-sm">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-row reveal">
+          <div class="project-row__num">03</div>
+          <div class="project-row__info">
+            <div class="project-row__tags">
+              <span class="tag">HTML</span><span class="tag">CSS Grid</span><span class="tag">Animation</span>
+            </div>
+            <h3>Agency Landing Page</h3>
+            <p>High-converting landing page with scroll-triggered animations, parallax sections, and a custom CSS-only image carousel.</p>
+          </div>
+          <div class="project-row__thumb" style="background:#1f1200;">
+            <span class="project-emoji">🎨</span>
+          </div>
+          <div class="project-row__links">
+            <a href="#" class="btn-outline btn-sm">Demo ↗</a>
+            <a href="https://github.com" target="_blank" class="btn-ghost btn-sm">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-row reveal">
+          <div class="project-row__num">04</div>
+          <div class="project-row__info">
+            <div class="project-row__tags">
+              <span class="tag">JavaScript</span><span class="tag">Canvas API</span>
+            </div>
+            <h3>Snake Game</h3>
+            <p>Classic Snake built with the HTML5 Canvas API. Features increasing speed, high score persistence, and touch controls for mobile.</p>
+          </div>
+          <div class="project-row__thumb" style="background:#001a00;">
+            <span class="project-emoji">🎮</span>
+          </div>
+          <div class="project-row__links">
+            <a href="#" class="btn-outline btn-sm">Demo ↗</a>
+            <a href="https://github.com" target="_blank" class="btn-ghost btn-sm">GitHub</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container about__grid">
+      <div class="about__left reveal">
+        <span class="label">About me</span>
+        <h2 class="section-title">Building the web<br /><em>one pixel</em> at a time</h2>
+        <p class="about__text">I'm a self-taught web developer based in Dhaka, Bangladesh. I care deeply about writing clean, semantic code and creating interfaces that feel effortless to use.</p>
+        <p class="about__text">My workflow is rooted in fundamentals — HTML, CSS, and JavaScript — which means my sites are fast, accessible, and easy to maintain.</p>
+        <a href="pages/register.html" class="btn-solid" style="margin-top:2rem;display:inline-block;">Work with me</a>
+      </div>
+      <div class="about__right reveal">
+        <div class="about__card">
+          <div class="about__card-line">
+            <span class="about__card-label">Location</span>
+            <span>Dhaka, Bangladesh 🇧🇩</span>
+          </div>
+          <div class="about__card-line">
+            <span class="about__card-label">Available</span>
+            <span class="dot dot--green" style="display:inline-block;margin-right:6px;"></span><span>Open to work</span>
+          </div>
+          <div class="about__card-line">
+            <span class="about__card-label">Focus</span>
+            <span>Frontend Development</span>
+          </div>
+          <div class="about__card-line">
+            <span class="about__card-label">Languages</span>
+            <span>English, Bengali</span>
+          </div>
+          <div class="about__card-line">
+            <span class="about__card-label">Education</span>
+            <span>B.Sc. Computer Science</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <span class="label">Expertise</span>
+      <h2 class="section-title">Skills &amp; tools</h2>
+      <div class="skills__grid">
+        <div class="skill-block reveal">
+          <h3>Core</h3>
+          <div class="skill-bar-row"><span>HTML5 / Semantics</span><div class="sbar"><div class="sbar__fill" data-w="95"></div></div><span class="sbar__pct">95%</span></div>
+          <div class="skill-bar-row"><span>CSS3 / Flexbox / Grid</span><div class="sbar"><div class="sbar__fill" data-w="92"></div></div><span class="sbar__pct">92%</span></div>
+          <div class="skill-bar-row"><span>JavaScript ES6+</span><div class="sbar"><div class="sbar__fill" data-w="80"></div></div><span class="sbar__pct">80%</span></div>
+          <div class="skill-bar-row"><span>Responsive Design</span><div class="sbar"><div class="sbar__fill" data-w="90"></div></div><span class="sbar__pct">90%</span></div>
+        </div>
+        <div class="skill-block reveal">
+          <h3>Tools</h3>
+          <div class="skill-bar-row"><span>Git &amp; GitHub</span><div class="sbar"><div class="sbar__fill" data-w="85"></div></div><span class="sbar__pct">85%</span></div>
+          <div class="skill-bar-row"><span>REST APIs / Fetch</span><div class="sbar"><div class="sbar__fill" data-w="78"></div></div><span class="sbar__pct">78%</span></div>
+          <div class="skill-bar-row"><span>Web Accessibility</span><div class="sbar"><div class="sbar__fill" data-w="75"></div></div><span class="sbar__pct">75%</span></div>
+          <div class="skill-bar-row"><span>Performance / DevTools</span><div class="sbar"><div class="sbar__fill" data-w="70"></div></div><span class="sbar__pct">70%</span></div>
+        </div>
+      </div>
+      <div class="tools-badges reveal">
+        <span>VS Code</span><span>Figma</span><span>npm</span><span>Chrome DevTools</span>
+        <span>Netlify</span><span>Vercel</span><span>GitHub Pages</span><span>Postman</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container contact__grid">
+      <div class="contact__left reveal">
+        <span class="label">Contact</span>
+        <h2 class="section-title">Let's build<br /><em>something</em></h2>
+        <p>Have a project in mind? Looking for a developer? I'd love to hear from you.</p>
+        <ul class="contact__links">
+          <li><a href="mailto:alex@example.com">📧 alex@example.com</a></li>
+          <li><a href="https://github.com" target="_blank">🐙 github.com/alexrahman</a></li>
+          <li><a href="https://linkedin.com" target="_blank">💼 linkedin.com/in/alexrahman</a></li>
+        </ul>
+      </div>
+      <form class="contact__form reveal" id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name" required />
+          <span class="field__error" id="nameErr"></span>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com" required />
+          <span class="field__error" id="emailErr"></span>
+        </div>
+        <div class="field">
+          <label for="msg">Message</label>
+          <textarea id="msg" rows="4" placeholder="Tell me about your project..." required></textarea>
+          <span class="field__error" id="msgErr"></span>
+        </div>
+        <button type="submit" class="btn-solid btn-lg btn-full">Send message</button>
+        <div class="form-ok" id="formOk">✅ Message sent! I'll get back to you soon.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="nav__brand"><span class="nav__brand-dot"></span>AR</span>
+      <p>Designed &amp; built by Alex Rahman · <span id="yr"></span></p>
+      <div class="footer__socials">
+        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

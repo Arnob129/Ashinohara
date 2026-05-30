@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — DevFolio</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body class="auth-body">
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <div class="auth-bg-grid"></div>
+
+  <div class="auth-card" id="authCard">
+
+    <div class="auth-card__logo">
+      <a href="../index.html">
+        <span class="nav__brand-dot"></span>AR DevFolio
+      </a>
+    </div>
+
+    <h1>Welcome back</h1>
+    <p class="auth-card__sub">
+      No account? <a href="register.html">Create one free →</a>
+    </p>
+
+    <form class="auth-form" id="loginForm" novalidate>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com" autocomplete="email" />
+        <span class="field__error" id="emailErr"></span>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <div class="password-wrap">
+          <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password" />
+          <button type="button" class="password-toggle" id="togglePwd" aria-label="Show password">👁</button>
+        </div>
+        <span class="field__error" id="pwdErr"></span>
+      </div>
+
+      <div class="auth-remember">
+        <label class="checkbox-label">
+          <input type="checkbox" id="remember" />
+          <span>Remember me</span>
+        </label>
+        <a href="#" class="auth-forgot">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="btn-solid btn-lg btn-full" id="loginBtn">Sign in</button>
+
+      <div class="auth-divider">or continue with</div>
+
+      <button type="button" class="btn-social" id="googleBtn">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z" fill="#4285F4"/>
+          <path d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.258c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z" fill="#34A853"/>
+          <path d="M3.964 10.707A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.707V4.961H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.039l3.007-2.332z" fill="#FBBC05"/>
+          <path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.961L3.964 6.293C4.672 4.166 6.656 3.58 9 3.58z" fill="#EA4335"/>
+        </svg>
+        Continue with Google
+      </button>
+
+    </form>
+
+    <div class="auth-footer">
+      <a href="../index.html">← Back to portfolio</a>
+    </div>
+
+    <!-- Demo users hint -->
+    <div class="demo-hint" id="demoHint">
+      <span>Demo credentials</span>
+      <code>user@demo.com / demo1234</code>
+    </div>
+
+  </div>
+
+  <style>
+    .auth-bg-grid {
+      position: fixed; inset: 0; z-index: -1;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    #authCard {
+      opacity: 0; transform: translateY(24px);
+      animation: cardIn 0.7s cubic-bezier(0.16,1,0.3,1) 0.1s forwards;
+    }
+    @keyframes cardIn { to { opacity: 1; transform: none; } }
+
+    .auth-remember {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.84rem;
+    }
+    .checkbox-label {
+      display: flex; align-items: center; gap: 0.5rem;
+      color: var(--fg2); cursor: pointer;
+    }
+    .checkbox-label input { accent-color: var(--accent); width: 15px; height: 15px; cursor: pointer; }
+    .auth-forgot { color: var(--fg3); font-size: 0.82rem; transition: color 0.2s; }
+    .auth-forgot:hover { color: var(--accent); }
+
+    .btn-social {
+      display: flex; align-items: center; justify-content: center; gap: 0.75rem;
+      width: 100%; padding: 0.75rem;
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 6px; cursor: pointer;
+      color: var(--fg); font-family: var(--ff-sans);
+      font-size: 0.88rem; font-weight: 600;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-social:hover { border-color: var(--fg3); background: var(--bg); }
+
+    .demo-hint {
+      margin-top: 1.5rem; padding: 0.75rem 1rem;
+      background: rgba(232,197,71,0.06);
+      border: 1px dashed rgba(232,197,71,0.2);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.78rem;
+    }
+    .demo-hint span { color: var(--fg3); }
+    .demo-hint code {
+      font-family: var(--ff-mono); color: var(--accent);
+      font-size: 0.75rem; cursor: pointer;
+    }
+    .demo-hint code:hover { text-decoration: underline; }
+
+    .login-error {
+      text-align: center; padding: 0.65rem;
+      background: rgba(230,85,85,0.1); border: 1px solid rgba(230,85,85,0.25);
+      border-radius: 6px; color: #e55; font-size: 0.82rem;
+      display: none;
+    }
+    .login-success {
+      text-align: center; padding: 0.65rem;
+      background: rgba(76,175,80,0.1); border: 1px solid rgba(76,175,80,0.25);
+      border-radius: 6px; color: #4caf50; font-size: 0.82rem;
+      display: none;
+    }
+  </style>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>
